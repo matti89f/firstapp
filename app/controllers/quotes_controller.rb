@@ -3,9 +3,6 @@ class QuotesController < ApplicationController
     @quote = Quote.order("RANDOM()").first
   end
 
-  def new
-    @quote = Quote.new
-  end
 
   def create
     @quote = Quote.create(quote_params)
@@ -15,7 +12,7 @@ class QuotesController < ApplicationController
     redirect_to root_path
   end
 
-  def about 
+  def about
   end
 
   private
